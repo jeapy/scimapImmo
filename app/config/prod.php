@@ -16,29 +16,21 @@ $app['site_email'] = 'noreply@musicbox.nothing';
 // Doctrine (db)
 $app['db.options'] = array(
     'driver'   => 'pdo_mysql',
-    'host'     => '144.217.93.153',
+    'host'     => 'localhost',
     'port'     => '3306',
-    'dbname'   => 'scimap',
-    'user'     => 'root',
-    'password' => '00000000',
+    'dbname'   => 'dbname',
+    'user'     => 'dbuser',
+    'password' => 'dbpassword',
 );
 // SwiftMailer
 // See http://silex.sensiolabs.org/doc/providers/swiftmailer.html
-/*
+
 $app['swiftmailer.options'] = array(
-    'host' => 'smtp.scimapimmmo.com',
-    'port' => '587',
-    'username' => 'infos@scimapimmmo.com',
-    'password' => 'scimap2017',
+    'host' => 'localhost',
+    'port' => '25',
+    'username' => 'mail username',
+    'password' => 'mail password',
     'encryption' => null,
     'auth_mode' => null
 );
-*/
-$app['swiftmailer.options'] = array(
- 'host' => 'mail.meteaci.com',
-    'port' => '587',
-    'username' => 'jean.zougou@meteaci.com',
-    'password' => 'yesjedois01F',
-    'encryption' => null,
-    'auth_mode' => null
-    );
+
