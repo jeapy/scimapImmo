@@ -93,7 +93,7 @@ class IndexController
             $app['mailer']->send(\Swift_Message::newInstance()
                 ->setSubject($subject)
                 ->setFrom($mail) // replace with your own
-                ->setTo(array('jean.zougou@ipwav.com'))   // replace with email recipient
+                ->setTo(array('email recipient'))   // replace with email recipient
                 ->setBody($app['twig']->render('common/email.html.twig',   // email template
                     array('name'      => $name,
                           'message'   => $messagebody,
