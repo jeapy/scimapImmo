@@ -1,0 +1,394 @@
+{% extends "public_layout.html.twig" %}
+
+	 {% block title %}Accueil{% endblock %}
+
+
+	
+
+			     {% block content %}
+   
+<div class="slider-container light rev_slider_wrapper" style="height: 700px;">
+					<div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 700, 'disableProgressBar': 'on'}">
+						<ul>
+							<li data-transition="fade">
+								<img src="{{ asset('img/demos/construction/slides/slide-construction-1.jpg')}}"  
+									alt=""
+									data-bgposition="center 100%" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+								
+								<div class="tp-caption top-label tp-caption-custom-stripe"
+									data-x="right" data-hoffset="100"
+									data-y="bottom" data-voffset="100"
+									data-start="1000"
+									data-transform_in="x:[100%];opacity:0;s:1000;">FAITE LE CHOIX DE VIVRE CHEZ VOUS EN UNE ANNÉE</div>
+							</li>
+							<li data-transition="fade">
+								<img src="{{ asset('img/demos/construction/slides/slide-construction-2.jpg')}}"  
+									alt=""
+									data-bgposition="center 100%" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+								
+								<div class="tp-caption top-label tp-caption-custom-stripe"
+									data-x="right" data-hoffset="180"
+									data-y="bottom" data-voffset="100"
+									data-start="1000"
+									data-transform_in="x:[100%];opacity:0;s:1000;">UN CHOIX DE VIE, UN GOUT UNIQUE DE TRANQUILITE</div>
+							</li>
+							<li data-transition="fade">
+								<img src="{{ asset('img/demos/construction/slides/slide-construction-3.jpg')}}"  
+									alt=""
+									data-bgposition="center 100%" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+								
+								<div class="tp-caption top-label tp-caption-custom-stripe"
+									data-x="right" data-hoffset="180"
+									data-y="bottom" data-voffset="100"
+									data-start="1000"
+									data-transform_in="x:[100%];opacity:0;s:1000;">VOS REVES DEVIENNENT REALITE</div>
+							</li>
+							<li data-transition="fade">
+								<img src="{{ asset('img/demos/construction/slides/slide-construction-4.jpg')}}"  
+									alt=""
+									data-bgposition="center 100%" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+								
+								<div class="tp-caption top-label tp-caption-custom-stripe"
+									data-x="right" data-hoffset="180"
+									data-y="bottom" data-voffset="100"
+									data-start="1000"
+									data-transform_in="x:[100%];opacity:0;s:1000;">VIVEZ DANS UN ESPRIT RIVIERA</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row mt-xl mb-xl pt-xl mb-xl">
+						<div class="col-md-4">
+							<h2 class="mt-xl mb-none text-color-dark">Qui sommes nous</h2>
+							<p >Nou conjugons des compétences extremement pointues pour construire des maisons indivudualisées</p>
+						</div>
+						<div class="col-md-2 center hidden-xs hidden-sm">
+							<img src="{{ asset('img/dotted-line-angle.png')}}" class="img-responsive" />
+						</div>
+						<div class="col-md-6">
+							<p class="mt-xl">Filiale du GROUP SCIMAP-SA, 
+							SCIMAP Immobilier, spécialiste de la construction individualisée conçoit chaque projet 
+							sur mesure en pensant aux objectifs 
+							attendus en termes de performance et 
+							de conformité. En vous appuyant sur un 
+							prestataire unique pour la gestion globale de votre projet clé en main, vous ne 
+							détournez pas vos forces vives du cœur 
+							de votre rêve de « vivre chez vous »....
+							</p>
+							<a class="mt-md" href="{{path('compagny')}}#who-we-are">Voir plus <i class="fa fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<section class="section section-tertiary section-no-border section-custom-construction">
+					<div class="container">
+						<div class="row pt-xl">
+							<div class="col-md-12">
+								<h2 class="mb-none text-color-dark">Produits</h2>
+								<p class="lead"></p>
+							</div>
+						</div>
+
+						<div class="row mt-lg">
+							<div class="col-md-4">
+								<div class="feature-box feature-box-style-2 mb-xl appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+									<div class="feature-box-icon">
+										<img src="{{ asset('img/demos/construction/icons/construction.png')}}" alt="" class="img-responsive" />
+									</div>
+									<div class="feature-box-info ml-md">
+										<h4 class="mb-sm">Maison Sociale</h4>
+										<p>Cette gamme comprend des villas basses de 3 à 5 pièces baties sur une superficifie de 61,91 à 98,80 m².</p>
+										<a class="mt-md" href="{{path('projet')}}#pre-construction">Voir Plus <i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="feature-box feature-box-style-2 mb-xl appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0">
+									<div class="feature-box-icon">
+										<img src="{{ asset('img/demos/construction/icons/ground-construction.png')}}" alt="" class="img-responsive" />
+									</div>
+									<div class="feature-box-info ml-md">
+										<h4 class="mb-sm">Maison Moyen Standing</h4>
+										<p>Cette gamme comprend des villas basses de 3 à 5 pièces baties sur une superficifie de 103,31 à 144,03 m².</p>
+										<a class="mt-md" href="{{path('projet')}}#general-construction">Voir Plus<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="feature-box feature-box-style-2 mb-xl appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0">
+									<div class="feature-box-icon">
+										<img src="{{ asset('img/demos/construction/icons/painting.png')}}" alt="" class="img-responsive" />
+									</div>
+									<div class="feature-box-info ml-md">
+										<h4 class="mb-sm">Maison Haut Standing</h4>
+										<p>Cette gamme comprend des villas duplexe de 3 à 5 pièces (Rez-de-chausée + étage) baties sur des superficifies de 105,08 à 134,80 m² (Rez-de-chausée) et 69,63 à 129,56 m² (Etage)</p>
+										<a class="mt-md" href="{{path('projet')}}#plumbing">Voir Plus<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+					</div>
+				</section>
+
+				<section class="pt-md pb-xl home-concept-construction">
+					<div class="container">
+						<div class="row pt-xl">
+							<div class="col-md-12">
+								<h2 class="mb-none text-color-dark">Projects</h2>
+								<p class="lead"></p>
+
+								<div class="diamonds-wrapper lightbox" data-plugin-options="{'delegate': '.diamond', 'type': 'image', 'gallery': {'enabled': true}}">
+									<ul class="diamonds">
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-1.jpg')}}" class="diamond">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-1.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-2.jpg')}}" class="diamond">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-2.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-3.jpg')}}" class="diamond">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-3.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-4.jpg')}}" class="diamond diamond-sm">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-4.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-5.jpg')}}" class="diamond">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-5.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-6.jpg')}}" class="diamond diamond-sm">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-6.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="{{ asset('img/demos/construction/gallery/construction-gallery-7.jpg')}}" class="diamond diamond-sm">
+												<div class="content">
+													<img src="{{ asset('img/demos/construction/gallery/construction-gallery-7.jpg')}}" class="img-responsive" />
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+						<div class="row row-diamons-description">
+							<div class="col-md-6">
+								<p></p>
+								<a class="btn btn-borders btn-primary" href="{{path('formS')}}">Souscrire</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section section-background mb-xl" style="background-image: url({{ asset('img/demos/construction/testimonials/testimonials-bg.jpg')}}); background-position: 50% 100%; min-height: 540px;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-6">
+								
+								<div class="owl-carousel owl-theme nav-bottom rounded-nav mt-xl pt-xl mb-xl pb-xl" data-plugin-options="{'items': 1, 'loop': false}">
+									<div>
+										<div class="col-md-12">
+											<div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+												<blockquote>
+													<p>Au cœur de notre mission, créativité, écoute, engagement, réactivité, éthique, esthétique et expériences 
+													sont nos valeurs. Elles matérialisent le socle de notre 
+													philosophie qui est de construire un espace de partage 
+													ouvert sur la confiance pour notre clientèle dont la 
+													satisfaction cristallise tout l’intérêt de nos attentes.</p>
+												</blockquote>
+												<div class="testimonial-author">
+													<p><strong>Scimap Immobilier</strong></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="col-md-12">
+											<div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+												<blockquote>
+													<p>Parce que chez nous c’est vous 
+													qui construisez, nous vous 
+													accordons la priorité de votre 
+													ouvrage en termes de goût et de choix.</p>
+												</blockquote>
+												<div class="testimonial-author">
+													<p><strong>Scimap Immobilier</strong></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="pt-md section-custom-construction-2">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 center">
+								<div class="owl-carousel owl-theme stage-margin rounded-nav" data-plugin-options="{'margin': 10, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40, 'items': 6, 'autoplay': true, 'autoplayTimeout': 3000}">
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-1.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-2.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-3.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-4.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-5.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-6.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-4.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-2.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-3.png')}}" alt="">
+									</div>
+									<div>
+										<img class="img-responsive" src="{{ asset('img/logos/logo-5.png')}}" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 center mt-xl">
+								<hr class="solid mt-none mb-xl">
+							</div>
+						</div>
+						<div class="row pt-xl">
+							<div class="col-md-12">
+								<h2 class="mb-none text-color-dark">Projets</h2>
+								<p class="lead mb-sm"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="recent-posts mt-xl">
+									<a href="demo-construction-blog-detail.html">
+										<img class="img-responsive pb-md" src="{{ asset('img/demos/construction/blog/blog-construction-1.jpg')}}" alt="Blog">
+									</a>
+									<article class="post">
+										<div class="date">
+											<span class="day">15</span>
+											<span class="month">Jan</span>
+										</div>
+										<h4 class="pt-md pb-none mb-none"><a class="text-color-dark" href="demo-construction-blog-detail.html">Projet 1</a></h4>
+										<p></p>
+										<p></p>
+										<a class="mt-md" href="demo-construction-blog-detail.html"></a>
+									</article>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="recent-posts mt-xl">
+									<a href="demo-construction-blog-detail.html">
+										<img class="img-responsive pb-md" src="{{ asset('img/demos/construction/blog/blog-construction-3.jpg')}}" alt="Blog">
+									</a>
+									<article class="post">
+										<div class="date">
+											<span class="day">25</span>
+											<span class="month">Mai</span>
+										</div>
+										<h4 class="pt-md pb-none mb-none"><a class="text-color-dark" href="demo-construction-blog-detail.html">Projet 2</a></h4>
+										<p></p>
+										<p></p>
+										<a class="mt-md" href="demo-construction-blog-detail.html"> </a>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+
+				</section>
+
+				
+					<div class="container-fluid news">
+						<div class="row mt-xl mb-xl pt-xl mb-xl">
+							<div class="col-md-offset-3 col-md-6 text-center">
+								<h4>Souscrire à la newsletter</h4>
+
+							<div class="newsletter">
+								{% for flashMessage in app.session.flashbag.get('success') %}
+							<div class="alert alert-success" id="newsletterSuccess">
+								 <strong>    {{ flashMessage}}</strong>
+											</div>
+											{% endfor %}
+								
+									
+								</div>
+
+								
+								{{form_start(form)}}
+								{{form_errors(form)}}
+									<div class="input-group">
+										
+										{{form_errors(form.mail)}}
+										{{ form_widget(form.mail, { 'attr':  {'class': 'form-control','placeholder':'Ex: votrenom@gmail.com ','id':'newsletterEmail' }}) }}
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="submit"><i class="icon-paper-plane icons"></i></button>
+										</span>
+									</div>
+								
+								{{form_end(form)}}
+								</div>
+							</div>
+						</div>
+					</div>
+			
+			
+				
+
+				 {% endblock %}

@@ -1,0 +1,89 @@
+
+	{% extends "admin/layout.html.twig" %}
+
+	 {% block title %}Souscripteur{% endblock %}
+
+
+
+			     {% block content %}
+
+  			
+  			<div class="content-box-large">
+  				<div class="panel-heading">
+					<div class="panel-title">	<h1>Details Souscripteurs	</h1></div>
+				</div>
+  				<div class="panel-body">
+  				
+
+  				
+  					<table class="table table-condensed table-responsive table-user-information">
+                                    <tbody>
+                                    <tr>
+                                        <td>Nom:</td>
+                                         <td>{{ subscribe.souscrire.firstname|e }}</td>
+			                 
+                                    </tr>
+                                    <tr>
+                                        <td>Prenom:</td>
+                                         <td>{{ subscribe.souscrire.lastname|e }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date de souscription</td>                                    
+			                 		 <td>{{ subscribe.souscrire.createAt | date('d-m-Y') }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type de plan</td>
+                                        {% if subscribe.plan == 1 %}
+						                   <td>PLAN PERSONNEL</td>
+						                  {% else %}
+						                   <td>PLAN SCIMAF</td>
+						                   {% endif %}
+
+                                    </tr>
+
+                                    {% if subscribe.plan == 1 %}
+                                    <tr>
+                                        <td>Type de Travaux</td>
+                                        <td>{{subscribe.worktype}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Localisation du terrain</td>
+                                        <td>{{subscribe.local}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Superficie</td>
+                                        <td>{{subscribe.area}}m²</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Permis de Construire</td>
+                                        <td>{{subscribe.buildnumber}}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% if subscribe.plan == 2 %}
+                                    <tr>
+                                        <td>Type de Travaux</td>
+                                        <td>{{subscribe.housetype}}</td>
+                                    </tr>
+                                    
+                                    {% endif %}
+
+                                    <tr>
+                                        <td>Apport initial</td>
+                                        <td>{{subscribe.startmoney}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Solde</td>
+                                        <td>{{subscribe.solde}}</td>
+                                    </tr>
+                                    
+                                    </tbody>
+                                </table>
+                                 <a class="btn btn-primary" href="{{ path('souscripteur') }}">Retour à la liste</a>
+  				</div>
+  			</div>
+
+ </div>
+  			
+{% endblock %}
+
+

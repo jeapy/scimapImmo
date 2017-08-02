@@ -1,0 +1,93 @@
+	{% extends "admin/layout.html.twig" %}
+
+	 {% block title %}Dashbord{% endblock %}
+
+
+	
+
+			     {% block content %}
+
+
+
+	<div class="row">
+		<div class="col-sm-4">
+    	    <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="glyphicon glyphicon-ok-sign"></i>
+                </div>
+                <div class="text">
+                    <var>{{sous}}</var>
+                    <label class="text-muted">souscripteur(s)</label>
+                </div>
+                <div class="options">
+                    <a href="{{path('souscripteur')}}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-search"></i> Details</a>
+                </div>
+            </div>
+		</div>
+        
+        <div class="col-sm-4">
+            <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="glyphicon glyphicon-tags"></i>
+                </div>
+                <div class="text">
+                    <var>{{news}}</var>
+                    <label class="text-muted">souscription(s) newsletter</label>
+                </div>
+                <div class="options">
+                    <a href="{{path('newsletter')}}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-search"></i> Details</a>
+                </div>
+            </div>
+    	</div>
+        <div class="col-sm-4">
+            <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="glyphicon glyphicon-user"></i>
+                </div>
+                <div class="text">
+                    <var>{{usr}}</var>
+                    <label class="text-muted">utilisteur(s)</label>
+                </div>
+                <div class="options">
+                    <a href="{{path('admin_users')}}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-wrench"></i> Details</a>
+                </div>
+            </div>
+		</div>
+	</div>
+
+
+
+
+
+		  	<div class="row">
+		  		<div class="col-md-12 panel-warning">
+		  			<div class="content-box-header panel-heading">
+	  					<div class="panel-title ">Rapport des souscriptions par mois</div>
+						
+						<div class="panel-options">
+							<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+							<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+						</div>
+		  			</div>
+		  			<div class="content-box-large box-with-header text-center">
+			  		
+					       <label class="label label-success">Line Chart</label>
+					      <div id="line-chart"></div>
+
+						<br /><br />
+					</div>
+		  		</div>
+		  	</div>
+    	  	<div class="content-box-large">
+
+    	  		
+
+			    
+
+			    
+				
+		  	</div>
+		  	
+
+
+ {% endblock %}

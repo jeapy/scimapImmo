@@ -1,0 +1,60 @@
+
+	{% extends "admin/layout.html.twig" %}
+
+	 {% block title %}Media{% endblock %}
+
+
+
+			     {% block content %}
+
+  			
+  			<div class="content-box-large">
+  				<div class="panel-heading">
+					<div class="panel-title">	<h1>Listes des medias	</h1></div>
+					<span class="pull-right"><a class="btn btn-primary btn-sm" href="{{ path('medias_new') }}">Ajouter</a></span>
+				</div>
+  				<div class="panel-body">
+  					<div class="table-responsive">
+  						<table class="table">
+			              <thead>
+			                <tr>
+			                  <th>#</th>
+			                  <th>type de media</th>			                 
+			                  <th>description</th>
+			                  <th>Date de publication</th>
+			                </tr>
+			              </thead>
+
+			               {% for media in medias %}
+
+			               <tbody>
+			                <tr>
+			                  <td>{{ media.id }}</td>
+			                  {% if media.mediatype == 1 %}
+			                  	<td>VIDEO</td>
+			                  {% else %}
+			                   <td>IMAGE</td>
+			                  {% endif %}	
+			                  <td>{{ media.description }}</td>	
+			                  <td>{{ media.createdAt | date('d-m-Y H:i') }}</td>		                  
+			                <td> <a class="btn btn-warning btn-sm" href="{{ path('media_edit', {'media': media.id}) }}">Modifier</a></td>
+			                </tr>
+			                 </tbody>
+                    
+                {% endfor %}
+			              
+			             
+			            </table>
+			           
+  					</div>
+  				</div>
+  				
+  					{% include "admin/pagination.html.twig" %}
+  				
+  			</div>
+ </div>
+  			
+
+{% endblock %}
+
+

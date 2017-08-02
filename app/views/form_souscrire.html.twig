@@ -1,0 +1,131 @@
+ {% extends "souscription.html.twig" %}
+ {% block form %} 
+
+							<div class="alert alert-success hidden mt-lg" id="contactSuccess">
+								<strong>Success!</strong> Your message has been sent to us.
+							</div>
+
+							<div class="alert alert-danger hidden mt-lg" id="contactError">
+								<strong>Error!</strong> There was an error sending your message.
+								<span class="font-size-xs mt-sm display-block" id="mailErrorMessage"></span>
+							</div>
+							<div class="testimonial testimonial-style-2 mb-none">
+								<blockquote>
+									<h1>Formulaire de souscription </h1>
+										
+								</blockquote>
+								
+							</div>
+
+							
+<h2>Identification du requérant</h2>
+	
+							{{ form_start(subscriberForm,{'action': path('formS')}) }}
+						    {{ form_errors(subscriberForm) }}
+						    									
+						    <div class="row">
+									<div class="form-group">
+										<div class="col-md-4">
+											{{ form_label(subscriberForm.firstname) }}
+									        {{ form_errors(subscriberForm.firstname) }}
+									        {{ form_widget(subscriberForm.firstname, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+										<div class="col-md-8">
+											{{ form_label(subscriberForm.lastname) }}
+									        {{ form_errors(subscriberForm.lastname) }}
+									        {{ form_widget(subscriberForm.lastname, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+
+									</div>
+							</div>
+
+							 <div class="row">
+									<div class="form-group">
+										<div class="col-md-4">
+											{{ form_label(subscriberForm.born) }}
+									        {{ form_errors(subscriberForm.born) }}
+									        {{ form_widget(subscriberForm.born, { 'attr':  {'class': 'form-control js-datepicker' }}) }}   
+										</div>
+										<div class="col-md-8">
+											{{ form_label(subscriberForm.job) }}
+									        {{ form_errors(subscriberForm.job) }}
+									        {{ form_widget(subscriberForm.job, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+									</div>
+							</div>
+
+							
+							<div class="row">
+									<div class="form-group">
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.adress) }}
+									        {{ form_errors(subscriberForm.adress) }}
+									        {{ form_widget(subscriberForm.adress, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.phone) }}
+									        {{ form_errors(subscriberForm.phone) }}
+									        {{ form_widget(subscriberForm.phone, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+									</div>
+							</div>
+
+
+							<div class="row">
+									<div class="form-group">
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.home) }}
+									        {{ form_errors(subscriberForm.home) }}
+									        {{ form_widget(subscriberForm.home, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.mail) }}
+									        {{ form_errors(subscriberForm.mail) }}
+									        {{ form_widget(subscriberForm.mail, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="form-group">
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.identity) }}
+									        {{ form_errors(subscriberForm.identity) }}
+									        {{ form_widget(subscriberForm.identity, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.number) }}
+									        {{ form_errors(subscriberForm.number) }}
+									        {{ form_widget(subscriberForm.number, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+									</div>
+							</div>
+
+							
+
+							<div class="row">
+									<div class="form-group">
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.validity) }}
+									        {{ form_errors(subscriberForm.validity) }}
+									        {{ form_widget(subscriberForm.validity, { 'attr':  {'class': 'form-control js-datepicker' }}) }} 
+										</div>
+										<div class="col-md-6">
+											{{ form_label(subscriberForm.deliverby) }}
+									        {{ form_errors(subscriberForm.deliverby) }}
+									        {{ form_widget(subscriberForm.deliverby, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+									</div>
+							</div>
+								  <div class="row">
+									<div class="col-md-12 text-right">
+										<input type="submit" value="Suivant" class="btn btn-primary mb-xlg" data-loading-text="Loading...">
+									</div>
+								</div>
+						{{ form_end(subscriberForm) }}
+
+
+<hr>
+
+											
+ {% endblock %}

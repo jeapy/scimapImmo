@@ -1,0 +1,16 @@
+/* Add here all your CSS customizations */
+.all{
+	display: none;
+}
+.scimap{
+	display: none;
+}
+.perso{
+	display: none;
+}
+
+.news {
+	background-color: #eaeff3 !important;
+	border-top-color: #fcfcfc !important;
+}
+

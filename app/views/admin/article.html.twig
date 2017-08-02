@@ -1,0 +1,58 @@
+
+	{% extends "admin/layout.html.twig" %}
+
+	 {% block title %}Article{% endblock %}
+
+
+
+			     {% block content %}
+
+  			
+  			<div class="content-box-large">
+  				<div class="panel-heading">
+					<div class="panel-title">	<h1>Listes des articles	</h1></div>
+					<span class="pull-right"><a class="btn btn-primary btn-sm" href="{{ path('articles_new') }}">Ajouter</a></span>
+				</div>
+				
+  				<div class="panel-body">
+  				
+  					<div class="table-responsive">
+  						<table class="table">
+			              <thead>
+			                <tr>
+			                  <th>#</th>
+			                  <th>titre</th>			                 
+			                  <th>description</th>
+			                  <th>Date de publication</th>
+			                </tr>
+			              </thead>
+
+			               {% for article in articles %}
+
+			               <tbody>
+			                <tr>
+			                  <td>{{ article.id }}</td>
+			                  <td>{{ article.title }}</td>	
+			                  <td>{{ article.description }}</td>	
+			                  <td>{{ article.createdAt | date('d-m-Y H:i') }}</td>		                  
+			                <td> <a class="btn btn-warning btn-sm" href="{{ path('article_edit', {'article': article.id}) }}">Modifier</a></td>
+			                </tr>
+			                 </tbody>
+                    
+                {% endfor %}
+			              
+			             
+			            </table>
+			           
+  					</div>
+  				</div>
+  				
+  					{% include "admin/pagination.html.twig" %}
+  				
+  			</div>
+ </div>
+  			
+
+{% endblock %}
+
+

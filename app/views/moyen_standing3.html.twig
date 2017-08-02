@@ -1,0 +1,225 @@
+{% extends "public_layout.html.twig" %}
+
+	 {% block title %}Nos Projets{% endblock %}
+
+
+ {% block content %}
+<section class="section section-tertiary section-no-border pb-md mt-none">
+					<div class="container">
+						<div class="row mt-xl">
+							<div class="col-md-10 col-md-offset-2 pt-xlg mt-xlg align-right">
+								<h1 class="text-uppercase font-weight-light mt-xl text-color-primary">Projects</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portfolio-title">
+								<div class="row">
+									<div class="portfolio-nav-all col-md-1">
+										<a href="{{path('projet')}}" data-tooltip data-original-title="Back to list"><i class="fa fa-th"></i></a>
+									</div>
+									<div class="col-md-10 center">
+										<h2 class="mb-none">Logement moyen standing 5 pièces</h2>
+									</div>
+									<div class="portfolio-nav col-md-1">
+										<a href="{{path('moyenstanding2')}}" class="portfolio-nav-prev" data-tooltip data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
+										<a href="{{path('hautstanding1')}}" class="portfolio-nav-next" data-tooltip data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<hr class="solid tall">
+						</div>
+					</div>
+
+					<div class="row mb-xlg">
+						<div class="col-md-4">
+							<div class="thumb-gallery">
+								<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}">
+									<div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/haut_standing-5.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/haut_standing-5.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/moyen_standing-4.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/moyen_standing-4.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/sociale-3.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/sociale-3.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/haut_standing-4.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/haut_standing-4.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/moyen_standing-5.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/moyen_standing-5.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/sociale-4.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/sociale-4.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+										<div>
+											<a href="{{asset('img/demos/construction/gallery/haut_standing-3.jpg')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+													<span class="thumb-info-wrapper font-size-xl">
+														<img alt="Project Image" src="{{asset('img/demos/construction/gallery/haut_standing-3.jpg')}}" class="img-responsive">
+														<span class="thumb-info-title font-size-xl">
+															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/haut_standing-5.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/moyen_standing-4.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/sociale-3.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/haut_standing-4.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/moyen_standing-5.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/sociale-4.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+									<div>
+										<img alt="Project Image" src="{{asset('img/demos/construction/gallery/haut_standing-3.jpg')}}" class="img-responsive cur-pointer">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-8">
+
+							<div class="project-detail-construction">
+
+								<p>Pour vous, nous avons créé le projet immobilier qui vous aide à être propriétaire de votre espace de vie. Vous possédez un terrain avec un ACD, vous 
+souhaitez construire un cadre de vie agréable, paisible et reposant pour votre 
+famille, SCIMAP Immobilier, vous accompagne pas à pas, jour après jour dans 
+la réalisation de votre rêve. Avec des partenaires techniques très expérimentés 
+et outillés nous mobilisons une équipe sur votre terrain. Avec des partenariats 
+financiers  solides  nous  vous  évitons  une  asphyxie  financière  pour  vous  permettre de construire sans aucun stress. Avec efficacité nous vous livrons votre 
+nouvelle espace de vie en un an. 
+Oui, avec SCIMAP Immobilier pour le prix d’un loyer mensuel vivez chez vous.</p>
+
+								<div class="row">
+									<div class="col-md-4">
+										<ul class="list-project-details">
+											<li>
+												<label>Type de maison:</label>
+												<p>5 pièces</p>
+											</li>
+											<li>
+												<label>Surface utile:</label>
+												<p>144,03 m²</p>
+											</li>
+											<li>
+												<label>Coût de la maison :</label>
+												<p>29,000,000 million</p>
+											</li>
+											
+										</ul>
+
+									</div>
+									<div class="col-md-4">
+										<ul class="list list-icons list-primary list-side-borders mt-xlg mb-xlg">
+			
+									<li><i class="fa fa-hand-o-right"></i>Séjour                  = 29,05</li>
+									<li><i class="fa fa-hand-o-right"></i>Salle à manger   =  8,23</li>
+									<li><i class="fa fa-hand-o-right"></i>Chambre P+PL   =14,27</li>
+									<li><i class="fa fa-hand-o-right"></i>SDE Chambre P  =4,05</li>
+									<li><i class="fa fa-hand-o-right"></i>Chambre 2+PL    =12,06</li>
+									<li><i class="fa fa-hand-o-right"></i>SDE chambre 2   = 2,30</li>
+									<li><i class="fa fa-hand-o-right"></i>Chambre 3+PL    = 9,07</li>
+									<li><i class="fa fa-hand-o-right"></i>SDE chambre3    = 2,40</li>
+									<li><i class="fa fa-hand-o-right"></i>Chambre 4+PL    =10,50 </li>
+									<li><i class="fa fa-hand-o-right"></i>SDE chambre 4   =1,89</li>
+									<li><i class="fa fa-hand-o-right"></i>Dégagement 1    = 8,76</li>
+									<li><i class="fa fa-hand-o-right"></i>Dégagement  2   = 6,28</li>
+									<li><i class="fa fa-hand-o-right"></i>Cuisine                 =  8,85</li>
+									<li><i class="fa fa-hand-o-right"></i>WC visiteur         = 1,37</li>
+									<li><i class="fa fa-hand-o-right"></i>Terrasse              = 7,09</li>
+									<li><i class="fa fa-hand-o-right"></i>Garage                = 17,86</li>
+
+											</ul>
+									</div>
+									
+									
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-md-12 text-right mt-xlg mb-xlg">
+								
+								<a class="btn btn-borders btn-lg btn-primary" href="{{path('souscrire')}}">Souscrire</a>
+							</div>
+				</div>
+
+ {% endblock %}

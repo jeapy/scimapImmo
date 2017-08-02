@@ -1,0 +1,84 @@
+
+	{% extends "admin/layout.html.twig" %}
+
+	 {% block title %}Souscripteur{% endblock %}
+
+
+
+			     {% block content %}
+
+  			
+  			<div class="content-box-large">
+  				<div class="panel-heading">
+					<div class="panel-title">	<h1>Listes des souscripteurs à la newsletter	</h1></div>
+					<span class="pull-right"><a class="btn btn-primary btn-sm" href="{{path('excel')}}">Exportez</a></span>
+				</div>
+  				<div class="panel-body">
+
+  					<div class="row">
+  						<div class="col-md-8">
+		  					<div class="table-responsive">
+		  						<table class="table">
+					              <thead>
+					                <tr>
+					                  <th>#</th>
+					                  <th>Email</th>			                 
+					                  <th>Subscribe Date</th>
+					                </tr>
+					              </thead>
+
+					               {% for new in news %}
+
+					               <tbody>
+					                <tr>
+					                  <td>{{ new.id }}</td>
+					                  <td>{{ new.mail }}</td>	
+					                  <td>{{ new.createAt | date('d-m-Y H:i') }}</td>		                  
+					               
+					                </tr>
+					                 </tbody>
+		                    
+		                {% endfor %}
+					              
+					             
+					            </table>
+		  					</div>
+		  			</div>
+  					<div class="col-md-4">
+		  					<div class="table-responsive">
+		  						<table class="table">
+					              <thead>
+					                <tr>
+					                  <th>#</th>
+					                  
+					                </tr>
+					              </thead>
+
+					               {% for f in files|slice(0, 5) %}
+
+					               <tbody>
+					                <tr>
+					                	 {% set file_base = '/scimapimmo/web/fic/' %}
+					                  <td> {{ f }} </td>
+					                   <td>  <a class="btn btn-success btn-sm" href="{{file_base}}{{ f }}" title="Télécharger"><i class="glyphicon glyphicon-download"></i> </a></td>
+					                </tr>
+					                 </tbody>
+		                    
+		               				 {% endfor %}
+					              
+					             
+					            </table>
+		  					</div>
+  					   </div>
+  					</div>
+
+  				</div>
+  				{% include "admin/pagination.html.twig" %}
+  			</div>
+
+ </div>
+  			
+
+{% endblock %}
+
+

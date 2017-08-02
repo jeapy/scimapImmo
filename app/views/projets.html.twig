@@ -1,0 +1,219 @@
+{% extends "public_layout.html.twig" %}
+
+	 {% block title %}Nos Projets{% endblock %}
+
+
+ {% block content %}
+<section class="section section-tertiary section-no-border pb-md mt-none">
+					<div class="container">
+						<div class="row mt-xl">
+							<div class="col-md-10 col-md-offset-2 pt-xlg mt-xlg align-right">
+								<h1 class="text-uppercase font-weight-light mt-xl text-color-primary">Nos Produits et  Offres</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row pt-sm">
+						<div class="col-md-12">
+								<h2 class="mb-none text-color-dark">Presentation</h2>
+							
+								<p class="lead mb-xl mt-lg">
+									La scimap  immobilier, spécialisée dans la construction de résidences  personnalisée, conçoit chaque projet sur mesure  en privilégiant les choix du client. 
+Elle  répond aux besoins de logements des personnes ayant un terrain, et intervient partout sur tout l’étendu du territoire.
+Elle propose des services de qualités concernant tous vos projets immobiliers :</p>
+		<ul class="list list-icons list-primary list-side-borders mt-xlg mb-xlg">
+			<li><i class="fa fa-check"></i> la construction des  résidences personnalisées répondant a vos besoins;</li>
+			<li><i class="fa fa-check"></i> la réhabilitation de patrimoines immobiliers;</li>
+			<li><i class="fa fa-check"></i> la gestion et réalisation de vos besoins d’habitats pour les associations.</li>
+		</ul>
+
+<p class="lead mb-xl mt-lg">Nous avons deux types d’offres:</p>
+		<ol class="list list-ordened list-ordened-style-2 mt-xlg mb-xlg">
+			<li> <strong>les produits bancarisés </strong>: le client a un revenu mensuel qui passe par une banque, il émet un ordre de virement permanent et son règlement se fait directement par la banque.</li>
+			<li><strong>les produits par niveau (non bancarisés)</strong> : des kits prépayés détaillés sont proposés dans chaque gamme et type de logement</li>
+			
+		</ol>
+
+ <p class="lead mb-xl mt-lg">Ces kits prépayés scindent le coût de construction de la gamme en cinq (5) étapes qui sont :</p>
+
+			<ol class="list list-ordened list-ordened-style-3 mt-xlg mb-xlg">
+				<li> FOUILLE ET FONDATION			(KN1)</li>
+				<li>GROS ŒUVRE-ELEVATION			(KN2)</li>
+				<li>COUVERTURE					(KN3)</li>
+				<li>PLOMBERIE/ELECTRICITE/CARRELAGE	(KN4)</li>
+				<li>FINITION/PEINTURE/ENDUITS		(KN5)</li>
+			</ol>
+<p class="lead mb-xl mt-lg">Ces kits prépayés peuvent être acquis progressivement par le souscripteur et l’exécution des travaux de construction peut se faire au même rythme ou après acquisition complète  du package.
+</p>
+
+
+<div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+												<blockquote>
+													<h2 class="mb-none text-color-primary mb-xlg">Droit de souscription et d’expertise : 
+300 000Fcfa</h2>
+												</blockquote>
+												
+											</div>
+
+								<hr class="solid mt-xlg mb-xlg " id="pre-construction">
+							</div>
+						<div class="col-md-12">
+							<h2 class="mb-none text-color-dark mb-xlg">Nos maisons standards</h2>
+
+							<ul class="nav nav-pills sort-source font-size-sm" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
+								<li data-option-value="*" class="active"><a href="#">Tous</a></li>
+								<li data-option-value=".pre-construction"><a href="#">Maison  sociale</a></li>
+								<li data-option-value=".general-construction"><a href="#">Maison moyen standing </a></li>
+								<li data-option-value=".plumbing"><a href="#">Maisons haut standing</a></li>
+							
+							</ul>
+
+							<hr class="solid mt-xlg mb-xlg">
+
+							<div class="row mb-xl pt-xs">
+
+								<div class="sort-destination-loader sort-destination-loader-showing">
+									<ul class="portfolio-list sort-destination" data-sort-id="portfolio">
+										<li class="col-md-4 isotope-item mb-xlg pre-construction">
+											<a href="{{path('sociale1')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/sociale-3.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison  sociale</h4>
+											<p class="mb-none">3 pièces</p>
+										</li>
+										<li class="col-md-4 isotope-item mb-xlg pre-construction">
+											<a href="{{path('sociale2')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/sociale-4.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison  sociale</h4>
+											<p class="mb-none">4 pièces</p>
+										</li>
+										<li class="col-md-4 isotope-item mb-xlg pre-construction">
+											<a href="{{path('sociale3')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/sociale-5.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison  sociale</h4>
+											<p class="mb-none">5 pièces</p>
+										</li>
+										<li class="col-md-4 isotope-item mb-xlg general-construction">
+											<a href="{{path('moyenstanding1')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/moyen_standing-3.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison moyen standing</h4>
+											<p class="mb-none">3 pièces</p>
+										</li>
+										<li class="col-md-4 isotope-item mb-xlg general-construction">
+											<a href="{{path('moyenstanding2')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/moyen_standing-4.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison moyen standing</h4>
+											<p class="mb-none">4 pièces</p>
+										</li>
+										<li class="col-md-4 isotope-item mb-xlg general-construction">
+											<a href="{{path('moyenstanding3')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/moyen_standing-5.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison moyen standing</h4>
+											<p class="mb-none">5 pièces</p>
+										</li>
+										<li class="col-md-4 isotope-item mb-xlg plumbing">
+											<a href="{{path('hautstanding1')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/haut_standing-3.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison haut standing</h4>
+											<p class="mb-none">3 pièces</p>
+										</li><li class="col-md-4 isotope-item mb-xlg plumbing">
+											<a href="{{path('hautstanding2')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/haut_standing-4.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison haut standing</h4>
+											<p class="mb-none">4 pièces</p>
+										</li><li class="col-md-4 isotope-item mb-xlg plumbing">
+											<a href="{{path('hautstanding3')}}">
+												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+													<span class="thumb-info-wrapper">
+														<img src="{{asset('img/demos/construction/gallery/haut_standing-5.jpg')}}" class="img-responsive" alt="">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Detail...</span>
+														</span>
+													</span>
+												</span>
+											</a>
+											<h4 class="mt-md mb-none">Maison haut standing</h4>
+											<p class="mb-none">5 pièces</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+
+
+						</div>
+
+						<div class="col-md-12 text-right mt-xlg mb-xlg">
+								
+								<a class="btn btn-borders btn-lg btn-primary" href="{{path('souscrire')}}">Souscrire à une offre</a>
+							</div>
+					</div>
+
+				</div>
+{% endblock %}

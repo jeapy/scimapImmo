@@ -1,0 +1,58 @@
+
+	{% extends "admin/layout.html.twig" %}
+
+	 {% block title %}Users{% endblock %}
+
+
+
+			     {% block content %}
+
+  			
+  			<div class="content-box-large">
+  				<div class="panel-heading">
+					<div class="panel-title">	<h1>Listes des utilistateurs	</h1></div>
+					<span class="pull-right"><a class="btn btn-primary btn-sm" href="{{ path('admin_user_add') }}">Ajouter</a></span>
+				</div>
+				
+  				<div class="panel-body">
+  				
+  					<div class="table-responsive">
+  						<table class="table">
+			              <thead>
+			                <tr>
+			                  <th>#</th>
+			                  <th>nom utilisateur</th>			                 
+			                  <th>mail</th>
+			                  <th>Date de creation</th>
+			                </tr>
+			              </thead>
+
+			               {% for user in users %}
+
+			               <tbody>
+			                <tr>
+			                  <td>{{ user.id }}</td>
+			                  <td>{{ user.username }}</td>	
+			                  <td>{{ user.mail }}</td>	
+			                  <td>{{ user.createdAt | date('d-m-Y H:i') }}</td>		                  
+			                <td> <a class="btn btn-warning btn-sm" href="{{ path('admin_user_edit', {'user': user.id}) }}">Modifier</a></td>
+			                </tr>
+			                 </tbody>
+                    
+                {% endfor %}
+			              
+			             
+			            </table>
+			           
+  					</div>
+  				</div>
+  				
+  					{% include "admin/pagination.html.twig" %}
+  				
+  			</div>
+ </div>
+  			
+
+{% endblock %}
+
+

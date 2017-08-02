@@ -1,0 +1,103 @@
+{% extends "login_layout.html.twig" %}
+
+	 {% block title %}Connexion{% endblock %}
+
+
+ {% block content %}
+				<section class="page-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><a href="#"></a></li>
+									<li class="active"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h1><a href="{{path('homepage')}}">Accueil <i class="fa fa-home"></i></a></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12">
+									<h1 class="text-center">AUTHENTIFICATION</h1>
+							<div class="featured-boxes">
+								<div class="row">
+									<div class="col-sm-offset-3 col-sm-6">
+										<div class="featured-box featured-box-primary align-left mt-xlg">
+											<div class="box-content">
+												<h4 class="heading-primary text-uppercase mb-md">Déja Utilisateur !</h4>
+
+												{% if error %}
+
+												<div class="alert alert-danger">
+
+												    <strong>Erreur de connexion!</strong> {{ error }}
+
+												</div>
+
+												{% endif %}
+
+
+{{ form_start(form, { 'attr': {'class': ''},'action': path('login_check') }) }}
+
+        <div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					 {{ form_label(form.username, null, { '	label_attr':  {'class': '' }}) }}		
+					  {{ form_errors(form.username) }}
+		              {{ form_widget(form.username, { 'attr':  {'class': 'form-control input-lg' }}) }}
+			
+           		 </div>
+					 
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					 {{ form_label(form.password, null, { '	label_attr':  {'class': '' }}) }}		
+					  {{ form_errors(form.password) }}
+		              {{ form_widget(form.password, { 'attr':  {'class': 'form-control input-lg' }}) }}
+			
+					 
+				</div>
+			</div>
+		</div>
+
+		
+     
+
+       <div class="row">
+			
+			<div class="col-md-12">
+				<input type="submit" value="Valider" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">				
+			</div>
+			<a  href="{{path('inscrire')}}" class=" pull-right mb-xl" > S'inscrire'</a>
+		</div>
+
+    {{ form_end(form) }}
+   
+  
+
+												
+											</div>
+										</div>
+									</div>
+									
+
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+{% endblock %}

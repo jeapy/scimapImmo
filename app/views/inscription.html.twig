@@ -1,0 +1,145 @@
+{% extends "login_layout.html.twig" %}
+
+	 {% block title %}Connexion{% endblock %}
+
+
+ {% block content %}
+				<section class="page-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><a href="#"></a></li>
+									<li class="active"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h1><a href="{{path('homepage')}}">Accueil <i class="fa fa-home"></i></a></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12">
+									<h1 class="text-center">INSCRIPTION</h1>
+							<div class="featured-boxes">
+								<div class="row">
+									<div class="col-sm-offset-3 col-sm-6">
+										<div class="featured-box featured-box-primary align-left mt-xlg">
+											<div class="box-content">
+												<h4 class="heading-primary text-uppercase mb-md">Nouvel Utilisateur !</h4>
+
+{% for flashMessage in app.session.flashbag.get('user_success') %}
+
+<div class="alert alert-success">
+
+    {{ flashMessage }}
+
+</div>
+
+{% endfor %}
+
+{% if form_errors(userForm.password.first) %}
+
+<div class="alert alert-danger">
+
+    {{ form_errors(userForm.password.first) }}
+
+</div>
+
+{% endif %}
+
+    {{ form_start(userForm, { 'attr': {'class': ''} }) }}
+
+
+        <div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					 {{ form_label(userForm.username, null, { '	label_attr':  {'class': '' }}) }}		
+					  {{ form_errors(userForm.username) }}
+		              {{ form_widget(userForm.username, { 'attr':  {'class': 'form-control input-lg' }}) }}
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					
+					 {{ form_label(userForm.password.first, null, { 'label_attr': { 'class': '' }}) }}
+					 {{ form_errors(userForm.password.first) }}
+		              {{ form_widget(userForm.password.first, { 'attr':  {'class': 'form-control input-lg' }}) }}
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					
+					 {{ form_label(userForm.password.second, null, { 'label_attr': { 'class': '' }}) }}
+					 {{ form_errors(userForm.password.second) }}
+		              {{ form_widget(userForm.password.second, { 'attr':  {'class': 'form-control input-lg' }}) }}
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					
+					 {{ form_label(userForm.mail, null, { 'label_attr': { 'class': '' }}) }}
+					 {{ form_errors(userForm.mail) }}
+		              {{ form_widget(userForm.mail, { 'attr':  {'class': 'form-control input-lg' }}) }}
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					
+					 {{ form_label(userForm.file, null, { 'label_attr': { 'class': '' }}) }}
+					 {{ form_errors(userForm.file) }}
+		              {{ form_widget(userForm.file, { 'attr':  {'class': 'form-control input-lg' }}) }}
+					
+				</div>
+			</div>
+		</div>
+
+		
+     
+
+       <div class="row">
+			
+			<div class="col-md-12">
+				<input type="submit" value="Valider" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">				
+			</div>
+			<a  href="{{path('login')}}" class=" pull-right mb-xl" > Se connecter</a>
+		</div>
+
+   {{ form_end(userForm) }}
+
+												
+											</div>
+										</div>
+									</div>
+									
+
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+{% endblock %}

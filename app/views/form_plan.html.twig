@@ -1,0 +1,162 @@
+  {% extends "souscription.html.twig" %}
+ {% block form %} 
+
+							<div class="alert alert-success hidden mt-lg" id="contactSuccess">
+								<strong>Success!</strong> Your message has been sent to us.
+							</div>
+
+							<div class="alert alert-danger hidden mt-lg" id="contactError">
+								<strong>Error!</strong> There was an error sending your message.
+								<span class="font-size-xs mt-sm display-block" id="mailErrorMessage"></span>
+							</div>
+							
+							
+
+							
+<h2 class="lead mb-xl mt-xs">Choix du Plan de Construction</h2>
+
+					{{ form_start(subscriberForm) }}
+						 {{ form_errors(subscriberForm) }}
+
+						
+
+						
+									<div class="form-group">
+									<label class="col-md-4 control-label">{{ form_label(subscriberForm.plan) }}	</label>
+										<div class="col-md-12">
+											
+									        {{ form_errors(subscriberForm.plan) }}
+									        {{ form_widget(subscriberForm.plan, { 'attr':  {'class': 'form-control' }}) }}
+										</div>
+										
+									</div>
+							
+									<div class="form-group perso">
+									<label class="col-md-4 control-label">{{ form_label(subscriberForm.worktype) }}	</label>
+									<div class="col-md-12">
+											
+									        {{ form_errors(subscriberForm.worktype) }}
+									        {{ form_widget(subscriberForm.worktype, { 'attr':  {'class': 'form-control mb-md' }}) }}
+										</div>
+										
+									</div>
+							
+
+							
+									<div class="form-group scimap">
+									<label class="col-md-4 control-label">{{ form_label(subscriberForm.housetype) }}</label>
+										<div class="col-md-12">
+									
+									        {{ form_errors(subscriberForm.housetype) }}
+									        {{ form_widget(subscriberForm.housetype, { 'attr':  {'class': 'form-control mb-md' }}) }}
+										</div>
+										
+									</div>
+							
+
+							<div class="form-group perso">
+								<label class="col-md-4 control-label">	 {{ form_label(subscriberForm.local) }}	</label>
+								<div class="col-md-12">																	
+																
+										 {{ form_widget(subscriberForm.local, { 'attr':  {'class': 'form-control','placeholder':'localisation du terrain' }}) }}
+									
+									   {{ form_errors(subscriberForm.local) }}
+								</div>
+							</div>
+
+
+							<div class="form-group perso">
+							<label class="col-md-4 control-label">{{ form_label(subscriberForm.area) }}	</label>
+								<div class="col-md-12">																	
+																	
+										 {{ form_widget(subscriberForm.area, { 'attr':  {'class': 'form-control','placeholder':'Superficie' }}) }}
+									
+									   {{ form_errors(subscriberForm.area) }}
+								</div>
+							</div>
+
+					
+
+							<div class="form-group perso">
+								<label class="col-md-4 control-label">{{ form_label(subscriberForm.document) }}</label>
+								<div class="col-md-12">																	
+											
+									  							
+										 {{ form_widget(subscriberForm.document, { 'attr':  {'class': 'form-control' }}) }}
+									
+									   {{ form_errors(subscriberForm.document) }}
+								</div>
+								</div>
+
+							<div class="form-group perso">
+								<label class="col-md-4 control-label"> {{ form_label(subscriberForm.buildnumber) }}</label>
+								<div class="col-md-12">																	
+																			
+										 {{ form_widget(subscriberForm.buildnumber, { 'attr':  {'class': 'form-control','placeholder':'Numero du permis de construire ' }}) }}
+									
+									   {{ form_errors(subscriberForm.buildnumber) }}
+								</div>
+							</div>
+
+
+
+							
+									<div class="form-group all">
+
+											   
+										<div class="col-md-6">															
+																	{{ form_label(subscriberForm.startmoney) }}			
+												 {{ form_widget(subscriberForm.startmoney, { 'attr':  {'class': 'form-control','placeholder':'Apport initial (40%)' }}) }}
+											
+											   {{ form_errors(subscriberForm.startmoney) }}
+										</div>
+
+										<div class="col-md-6 all">														
+																{{ form_label(subscriberForm.solde) }}				
+												 {{ form_widget(subscriberForm.solde, { 'attr':  {'class': 'form-control','placeholder':'Solde' }}) }}
+										
+											   {{ form_errors(subscriberForm.solde) }}
+										</div>										
+									</div>
+
+									<div class="form-group all">
+										<div class="col-md-6">															
+												 {{ form_label(subscriberForm.contractyear) }}								
+												 {{ form_widget(subscriberForm.contractyear, { 'attr':  {'class': 'form-control','placeholder':'En année','min':'1','max':'7' }}) }}
+											
+											   {{ form_errors(subscriberForm.contractyear) }}
+										</div>
+
+										<div class="col-md-6 all">														
+													{{ form_label(subscriberForm.contractmonth) }}							
+												 {{ form_widget(subscriberForm.contractmonth, { 'attr':  {'class': 'form-control','placeholder':'En mois' ,'min':'1','max':'84'}}) }}
+											
+											   {{ form_errors(subscriberForm.contractmonth) }}
+										</div>										
+									</div>
+							
+							
+
+							
+									<div class="form-group all">
+										<div class="col-md-12">
+											{{ form_label(subscriberForm.monthly) }}
+									        {{ form_errors(subscriberForm.monthly) }}
+									        {{ form_widget(subscriberForm.monthly, { 'attr':  {'class': 'form-control' }}) }}
+										</div>								
+										
+									</div>
+							
+
+
+
+						
+
+						    <div class="row">
+									<div class="col-md-12">
+										<input type="submit" value="Terminer" class="btn btn-primary mb-xlg" data-loading-text="Loading...">
+									</div>
+								</div>
+
+						{{ form_end(subscriberForm) }}
+ {% endblock %}
